@@ -12,12 +12,10 @@ type Inputs = {
 type Props = {};
 
 function Contact({}: Props) {
-  const {
-    register,
-    handleSubmit,
-  } = useForm<Inputs>();
+  const { register, handleSubmit } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (formData) => {
-    window.location.href = `mailto:dianepucci19@gmail.com`
+    window.location.href = `mailto:dianepucci19@gmail.com?subject=${formData.subject}&body=Hello, my name is
+     ${formData.name}. ${formData.message} (${formData.email})`;
   };
   return (
     <div
@@ -54,17 +52,37 @@ function Contact({}: Props) {
           </div>
         </div>
 
-        <form 
-        onSubmit={handleSubmit(onSubmit)}
-        className="flex flex-col space-y-2 w-fit mx-auto">
+        <form
+          onSubmit={handleSubmit(onSubmit)}
+          className="flex flex-col space-y-2 w-fit mx-auto"
+        >
           <div className="flex space-x-2">
-            <input {...register('name')} placeholder="Name" className="contactInput" type="text" />
-            <input {...register('email')} placeholder="Email" className="contactInput" type="email" />
+            <input
+              {...register("name")}
+              placeholder="Name"
+              className="contactInput"
+              type="text"
+            />
+            <input
+              {...register("email")}
+              placeholder="Email"
+              className="contactInput"
+              type="email"
+            />
           </div>
 
-          <input {...register('subject')} placeholder="Subject" className="contactInput" type="text" />
+          <input
+            {...register("subject")}
+            placeholder="Subject"
+            className="contactInput"
+            type="text"
+          />
 
-          <textarea {...register('message')} placeholder="Message" className="contactInput" />
+          <textarea
+            {...register("message")}
+            placeholder="Message"
+            className="contactInput"
+          />
 
           <button
             type="submit"
