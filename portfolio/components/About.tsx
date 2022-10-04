@@ -1,9 +1,13 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  pageInfo: PageInfo
+};
 
-function About({}: Props) {
+function About({pageInfo}: Props) {
   return (
 <motion.div
     initial={{opacity:0}}
@@ -30,7 +34,7 @@ function About({}: Props) {
         transition={{
           duration: 1,
         }}
-        src="https://cdn.discordapp.com/attachments/947981440530911263/1020674440113164420/post3.jpeg"
+        src={urlFor(pageInfo?.profilePic).url()}
         className="mt-40 mr-[12px] mb-18 md:my-0 flex-shrink-0 w-56 h-56 rounded-full
       object-cover md:rounded-lg md:w-60 md:h-[260px] xl:w-[300px] xl:h-[400px]"
       />
@@ -41,10 +45,7 @@ function About({}: Props) {
           background: ;
         </h4>
         <p className="text-base">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti
-          nihil voluptates, quos eum consectetur earum aspernatur exercitationem
-          aperiam at, ea nesciunt optio. Cumque quidem, repellat placeat dolorem
-          quam labore laudantium?
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>

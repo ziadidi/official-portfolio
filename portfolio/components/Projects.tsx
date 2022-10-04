@@ -1,15 +1,18 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project[];
+};
 
-function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+function Projects({ projects }: Props) {
   return (
     <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    transition={{ duration: 1.5 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col 
     text-leftmd:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
@@ -24,20 +27,21 @@ function Projects({}: Props) {
          snap-x snap-mandatory z-20 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
          scrollbar-thumb-[#2471A3]/80"
       >
-        {projects.map((project, i) => (
+        {projects?.map((project, i) => (
           <div
+          key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
           items-center justify-center p-20 md:p-44 h-screen"
           >
             <motion.img
-             initial={{ 
+              initial={{
                 y: -300,
                 opacity: 0,
-             }}
-             transition={{ duration: 1 }}
-             whileInView={{ opacity: 1, y: 0 }}
-             viewport={{ once: true }}
-              src="https://cdn.discordapp.com/attachments/947981440530911263/1026100894628069427/PngItem_1404966.png"
+              }}
+              transition={{ duration: 1 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              src={urlFor(project?.image).url()}
               className="w-[60%] xl:w-[45%]"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
@@ -45,13 +49,21 @@ function Projects({}: Props) {
                 <span className="underline decoration-[#2471A3]/80">
                   Case study {i + 1} of {projects.length}:
                 </span>{" "}
-                Pistachogram
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {" "}
+                {project?.technologies.map((technology) => (
+                  <img
+                    className="h-10 w-10 object-cover"
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                  />
+                ))}
+              </div>
+
               <p className="text-lg text-center md:text-left">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit
-                aliquam facere perferendis eveniet dolorum sapiente nam aperiam
-                tempore corrupti ratione magnam, molestias itaque laudantium qui
-                exercitationem, ipsam ea Fuga.
+                {project?.summary}
               </p>
             </div>
           </div>
