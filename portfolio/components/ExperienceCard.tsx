@@ -11,7 +11,7 @@ function ExperienceCard({ experience }: Props) {
   return (
     <article
       className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    w-[500px] h-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100
+    w-[500px] h-[375px] md:-scroll-mt-10 md:w-[600px] lg:w-[700px] lg:h-[400px] snap-center bg-[#292929] p-10 hover:opacity-100
     opacity-50 cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
@@ -22,13 +22,14 @@ function ExperienceCard({ experience }: Props) {
         transition={{ duration: 1.2 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="w-32 h-32 rounded-full object-cover
+        className="w-32 h-32 rounded-full shrink-0 object-cover
         object-center"
         src={urlFor(experience?.companyImage).url()}
         alt=""
       />
 
-      <div className="px-10 md:px-10">
+      <div className="px-10 md:px-10 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
+      scrollbar-thumb-[#2471A3]/80">
         <h4 className="text-3xl font-light">Freelance Web Developers</h4>
         <p className="font-bold text-2xl mt-1">ASDP devs</p>
         <div className="flex space-x-2 my-2">

@@ -35,14 +35,14 @@ function About({pageInfo}: Props) {
           duration: 1,
         }}
         src={urlFor(pageInfo?.profilePic).url()}
-        className="mt-40 mr-[12px] mb-18 md:my-0 flex-shrink-0 w-56 h-56 rounded-full
-      object-cover md:rounded-lg md:w-60 md:h-[260px] xl:w-[300px] xl:h-[400px]"
+        className="mt-20 mr-[12px] md:my-0 flex-shrink-0 w-36 h-36 rounded-full
+      object-cover md:rounded-lg md:w-60 md:h-[260px] lg:w-[300px] lg:h-[300px]"
       />
-      <div className="space-y-10 px-0 md:px-10">
+      <div className="space-y-5 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
           <span className="underline decoration-teal-500">little</span>{" "}
-          background: ;
+          background: 
         </h4>
         <p className="text-base">
           {pageInfo?.backgroundInformation}

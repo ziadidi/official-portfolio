@@ -9,7 +9,7 @@ import Projects from "../components/Projects";
 import Skills from "../components/Skills";
 import WorkExperience from "../components/WorkExperience";
 import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchExperiences } from "../utils/fetchexperiences";
+import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";

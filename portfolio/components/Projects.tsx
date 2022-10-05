@@ -29,9 +29,9 @@ function Projects({ projects }: Props) {
       >
         {projects?.map((project, i) => (
           <div
-          key={project._id}
+            key={project._id}
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
-          items-center justify-center p-20 md:p-44 h-screen"
+          items-center justify-center p-16 md:p-44 h-screen"
           >
             <motion.img
               initial={{
@@ -42,9 +42,9 @@ function Projects({ projects }: Props) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               src={urlFor(project?.image).url()}
-              className="w-[60%] xl:w-[45%]"
+              className="w-[40%] mt-[10px] xl:w-[25%] "
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-6 px-0 md:px-10 max-w-4xl">
               <h4 className="text-3xl font-semibold text-center">
                 <span className="underline decoration-[#2471A3]/80">
                   Case study {i + 1} of {projects.length}:
@@ -62,7 +62,7 @@ function Projects({ projects }: Props) {
                 ))}
               </div>
 
-              <p className="text-lg text-center md:text-left">
+              <p className="mb-[70px] text-lg text-center md:text-left">
                 {project?.summary}
               </p>
             </div>
