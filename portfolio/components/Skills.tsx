@@ -19,11 +19,11 @@ function Skills({ skills }: Props) {
     >
       <h3
         className="absolute top-20 uppercase
-       tracking-[20px] text-slate-500 text-2xl"
+       tracking-[20px] text-[#8696bc] text-2xl"
       >
         skills
       </h3>
-      <h3 className="absolute top-28 tracking-[3px] uppercase text-slate-400 text-sm">
+      <h3 className="absolute top-28 tracking-[3px] uppercase text-sm">
         hover over the skills to display{" "}
         <span className="italic lowercase underline">expertise.</span>
       </h3>

@@ -17,7 +17,7 @@ function Projects({ projects }: Props) {
     text-leftmd:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3
-        className="absolute top-24 uppercase tracking-[20px] text-slate-500
+        className="absolute top-24 uppercase tracking-[20px] text-[#8696bc]
          text-2xl"
       >
         Projects
@@ -25,7 +25,7 @@ function Projects({ projects }: Props) {
       <div
         className="relative w-full flex overflow-x-scroll overflow-y-hidden 
          snap-x snap-mandatory z-20 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
-         scrollbar-thumb-[#2471A3]/80"
+         scrollbar-thumb-[#adccf3]/80"
       >
         {projects?.map((project, i) => (
           <div
@@ -46,7 +46,7 @@ function Projects({ projects }: Props) {
             />
             <div className="space-y-6 px-0 md:px-10 max-w-4xl">
               <h4 className="text-3xl font-semibold text-center">
-                <span className="underline decoration-[#2471A3]/80">
+                <span className="underline decoration-[#82a0ff]/80">
                   Case study {i + 1} of {projects.length}:
                 </span>{" "}
                 {project?.title}
@@ -70,7 +70,7 @@ function Projects({ projects }: Props) {
         ))}
       </div>
       <div
-        className="w-full absolute top-[30%] bg-[#2b7eb6]/10
+        className="w-full absolute top-[30%] bg-[#adccf3]/30
          left-0 h-[500px] -skew-y-12"
       ></div>
     </motion.div>

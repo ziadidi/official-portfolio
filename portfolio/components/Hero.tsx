@@ -33,10 +33,10 @@ export default function Hero({pageInfo}: Props) {
         className="relative rounded-full h-40 w-40 mx-auto object-cover"
       />
       <div className="z-20">
-        <h2 className="text-sm uppercase text-slate-500 pb-2 tracking-[12px]">
+        <h2 className="text-sm uppercase text-[#82a0ff] pb-2 tracking-[12px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-3xl text-[#7FB3D5] lg:text-4xl font-semibold px-10">
+        <h1 className="text-3xl text-[#e7f2f6] lg:text-4xl font-semibold px-10">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#16C762" />
         </h1>

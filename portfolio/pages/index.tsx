@@ -26,9 +26,9 @@ type Props = {
 const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
   return (
     <div
-      className="scroll-smooth bg-[rgb(36,36,36)] text-white h-screen snap-y snap-mandatory 
+      className="scroll-smooth bg-[rgb(27,48,75)] text-[#e7f2f6] h-screen snap-y snap-mandatory 
     overflow-y-scroll overflow-x-hidden z-0 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
-    scrollbar-thumb-[#2471A3]/80"
+    scrollbar-thumb-[#8696bc]/80"
     >
       <Head>
         <title>{pageInfo?.name} - AsDp</title>
@@ -61,7 +61,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
       </section>
 
       <Link href="#hero">
-        <footer className="sticky bottom-5 w-full cursor-pointer">
+        <footer className="sticky bottom-5 cursor-pointer">
           <div className="flex items-centr justify-center">
             <img
               className="object-cover h-16 w-16 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"

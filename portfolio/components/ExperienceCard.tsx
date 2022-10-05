@@ -10,8 +10,9 @@ type Props = {
 function ExperienceCard({ experience }: Props) {
   return (
     <article
-      className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0
-    w-[500px] h-[375px] md:-scroll-mt-10 md:w-[600px] lg:w-[700px] lg:h-[400px] snap-center bg-[#292929] p-10 hover:opacity-100
+      className="flex flex-col rounded-lg items-center space-y-7 hover:opacity-100 flex-shrink-0
+    w-[500px] h-[375px] md:-scroll-mt-10 md:w-[600px] md:h-[385px] lg:h-[400px] 
+    lg:mt-10 snap-center bg-[#292929] p-10 
     opacity-50 cursor-pointer transition-opacity duration-200 overflow-hidden"
     >
       <motion.img
@@ -28,8 +29,8 @@ function ExperienceCard({ experience }: Props) {
         alt=""
       />
 
-      <div className="px-10 md:px-10 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
-      scrollbar-thumb-[#2471A3]/80">
+      <div className="px-20 md:px-10 scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
+      scrollbar-thumb-[#8696bc]/80">
         <h4 className="text-3xl font-light">Freelance Web Developers</h4>
         <p className="font-bold text-2xl mt-1">ASDP devs</p>
         <div className="flex space-x-2 my-2">
@@ -42,7 +43,7 @@ function ExperienceCard({ experience }: Props) {
           ))}
         </div>
 
-        <p className="uppercase py-5 text-gray-300">
+        <p className="uppercase py-5">
           {new Date(experience.dateStarted).toDateString()} -{" "}
           {experience.isCurrentlyWorkingHere
             ? "Present"

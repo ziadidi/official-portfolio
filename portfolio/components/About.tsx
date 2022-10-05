@@ -17,7 +17,7 @@ function About({pageInfo}: Props) {
     md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center"
     >
       <h3
-        className=" absolute top-24 uppercase tracking-[20px] text-slate-500
+        className=" absolute top-24 uppercase tracking-[20px] text-[#8696bc]
       text-2xl"
       >
         About
@@ -38,10 +38,10 @@ function About({pageInfo}: Props) {
         className="mt-20 mr-[12px] md:my-0 flex-shrink-0 w-36 h-36 rounded-full
       object-cover md:rounded-lg md:w-60 md:h-[260px] lg:w-[300px] lg:h-[300px]"
       />
-      <div className="space-y-5 px-0 md:px-10">
+      <div className="space-y-2 px-0 md:px-10">
         <h4 className="text-4xl font-semibold">
           Here is a{" "}
-          <span className="underline decoration-teal-500">little</span>{" "}
+          <span className="underline italic decoration-[#82a0ff]">little</span>{" "}
           background: 
         </h4>
         <p className="text-base">

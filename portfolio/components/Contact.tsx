@@ -32,35 +32,39 @@ function Contact({}: Props) {
     >
       <h3
         className="absolute top-24 uppercase
-       tracking-[20px] text-slate-500 text-2xl"
+       tracking-[20px] text-[#8696bc] text-2xl"
       >
         Contact
       </h3>
 
-      <div className=" mt-[170px] flex flex-col justify-center space-y-4">
-        <h3 className="text-3xl font-semibold text-center">
+      <div
+        className="mt-20 max-h-[400px] flex flex-col justify-center 
+        space-y-2 md:mt-10 md:scrollbar scrollbar-thumb-rounded-md scrollbar-track-gray-400/20
+      scrollbar-thumb-[#8696bc]/80 lg:mt-[60px]"
+      >
+        <h3 className="text-3xl font-semibold text-center md:mt-[85px]">
           Like what you see?
         </h3>
         <h4
           className="text-2xl text-center font-thin lowercase underline
-           decoration-[#154360]"
+           decoration-[#82a0ff]"
         >
           let's have a chat.
         </h4>
 
-        <div className="space-y-6">
+        <div className="space-y-4">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#2471A3] h-7 w-7 animate-pulse" />
+            <PhoneIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
             <p className="text-1xl">+34 624 687 472 | +39 327 025 9364</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <InboxIcon className="text-[#2471A3] h-7 w-7 animate-pulse" />
+            <InboxIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
             <p className="text-1xl ">dianepucci19@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <GlobeEuropeAfricaIcon className="text-[#2471A3] h-7 w-7 animate-pulse" />
+            <GlobeEuropeAfricaIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
             <p className="text-1xl">Adeje, Santa Cruz, Tenerife</p>
           </div>
         </div>
@@ -95,7 +99,7 @@ function Contact({}: Props) {
             placeholder="Don't be shy...👉👈 Send a message!"
             className="contactInput"
           />
-          <button className="bg-[#154360] text-black py-5 px-10 rounded-md font-bold">
+          <button className="bg-[#82a0ff] text-black py-5 px-10 rounded-md font-bold">
             Submit
           </button>
         </form>
