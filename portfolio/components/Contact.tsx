@@ -1,6 +1,5 @@
 import React from "react";
 import { useForm, SubmitHandler } from "react-hook-form";
-
 import {
   PhoneIcon,
   GlobeEuropeAfricaIcon,
@@ -54,13 +53,13 @@ function Contact({}: Props) {
 
         <div className="space-y-4">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
-            <p className="text-1xl">+34 624 687 472 | +39 327 025 9364</p>
+            <InboxIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
+            <p className="text-1xl ">dianepucci19@gmail.com</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
-            <InboxIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
-            <p className="text-1xl ">dianepucci19@gmail.com</p>
+            <PhoneIcon className="text-[#adccf3] h-7 w-7 animate-pulse" />
+            <p className="text-1xl">+34 624 687 472 | +39 327 025 9364</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">

@@ -14,8 +14,8 @@ function Skills({ skills }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1 }}
       className="flex relative flex-col text-center 
-      md:text-left xl:flex-row max-w-[2000px] xl:px-10
-       min-h-screen justify-center xl:space-y-0 mx-auto items-center"
+      md:text-left lg:flex-row max-w-[2000px] lg:px-10
+       min-h-screen justify-center mx-auto items-center"
     >
       <h3
         className="absolute top-20 uppercase
@@ -27,7 +27,7 @@ function Skills({ skills }: Props) {
         hover over the skills to display{" "}
         <span className="italic lowercase underline">expertise.</span>
       </h3>
-      <div className="grid grid-cols-4 gap-5 xl:mt-80">
+      <div className="mt-[60px] grid grid-cols-4 gap-5">
         {skills?.map((skill) => (
           <Skill key={skill._id} skill={skill} />
         ))}
