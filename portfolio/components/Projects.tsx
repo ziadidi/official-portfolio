@@ -60,6 +60,14 @@ function Projects({ projects }: Props) {
                     src={urlFor(technology.image).url()}
                   />
                 ))}
+
+                <div>
+                  <a
+                  href={project?.linkToBuild}
+                  target="_blank">
+                    Go to the Project
+                  </a>
+                </div>
               </div>
 
               <p className="mb-[70px] text-lg text-center md:text-left">
