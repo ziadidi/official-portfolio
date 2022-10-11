@@ -44,7 +44,7 @@ function About({pageInfo}: Props) {
           <span className="underline italic decoration-[#82a0ff]">little</span>{" "}
           background: 
         </h4>
-        <p className="text-base">
+        <p className="text-base pb-10">
           {pageInfo?.backgroundInformation}
         </p>
       </div>

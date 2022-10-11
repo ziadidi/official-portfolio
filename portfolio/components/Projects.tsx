@@ -14,7 +14,7 @@ function Projects({ projects }: Props) {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 1.5 }}
       className="h-screen relative flex overflow-hidden flex-col 
-    text-leftmd:flex-row max-w-full justify-evenly mx-auto items-center z-0"
+    text-left md:flex-row max-w-full justify-evenly mx-auto items-center z-0"
     >
       <h3
         className="absolute top-24 uppercase tracking-[20px] text-[#8696bc]
@@ -33,23 +33,30 @@ function Projects({ projects }: Props) {
             className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
           items-center justify-center p-16 md:p-44 h-screen"
           >
-            <motion.img
-              initial={{
-                y: -300,
-                opacity: 0,
-              }}
-              transition={{ duration: 1 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              src={urlFor(project?.image).url()}
-              className="w-[40%] mt-[10px] xl:w-[25%] "
-            />
-            <div className="space-y-6 px-0 md:px-10 max-w-4xl">
-              <h4 className="text-3xl font-semibold text-center">
+            <a
+              href={project?.linkToBuild}
+              target="_blank"
+              rel="noreferrer"
+              className="flex items-center justify-center"
+            >
+              <motion.img
+                initial={{
+                  y: -300,
+                  opacity: 0,
+                }}
+                transition={{ duration: 1 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                src={urlFor(project?.image).url()}
+                className="mt-[10px] w-[40%] md:w-[40%] lg:w-[25%]"
+              />
+            </a>
+            <div className="space-y-3 px-0 md:px-10 max-w-7xl">
+              <h4 className="text-2xl md:text-3xl font-semibold text-center">
+                Project{" "}
                 <span className="underline decoration-[#82a0ff]/80">
-                  Case study {i + 1} of {projects.length}:
-                </span>{" "}
-                {project?.title}
+                  {i + 1} of {projects.length}
+                </span>{" "}: {project?.title}
               </h4>
               <div className="flex items-center space-x-2 justify-center">
                 {" "}
@@ -60,14 +67,6 @@ function Projects({ projects }: Props) {
                     src={urlFor(technology.image).url()}
                   />
                 ))}
-
-                <div>
-                  <a
-                  href={project?.linkToBuild}
-                  target="_blank">
-                    Go to the Project
-                  </a>
-                </div>
               </div>
 
               <p className="mb-[70px] text-lg text-center md:text-left">

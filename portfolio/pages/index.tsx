@@ -7,9 +7,9 @@ import Header from "../components/Header";
 import Hero from "../components/Hero";
 import Projects from "../components/Projects";
 import Skills from "../components/Skills";
-import WorkExperience from "../components/WorkExperience";
-import { Experience, PageInfo, Project, Skill, Social } from "../typings";
-import { fetchExperiences } from "../utils/fetchExperiences";
+// import WorkExperience from "../components/WorkExperience";
+import { PageInfo, Project, Skill, Social } from "../typings";
+// import { fetchExperiences } from "../utils/fetchExperiences";
 import { fetchPageInfo } from "../utils/fetchPageInfo";
 import { fetchProjects } from "../utils/fetchProjects";
 import { fetchSkills } from "../utils/fetchSkills";
@@ -17,13 +17,13 @@ import { fetchSocials } from "../utils/fetchSocials";
 
 type Props = {
   pageInfo: PageInfo;
-  experiences: Experience[];
+  // experiences: Experience[];
   skills: Skill[];
   projects: Project[];
   socials: Social[];
 }
-
-const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
+// experiences
+const Home = ({pageInfo, projects, skills, socials}: Props) => {
   return (
     <div
       className="scroll-smooth bg-[rgb(27,48,75)] text-[#e7f2f6] h-screen snap-y snap-mandatory 
@@ -44,9 +44,9 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
         <About pageInfo={pageInfo} />
       </section>
 
-      <section id="experience" className="snap-center">
+      {/* <section id="experience" className="snap-center">
         <WorkExperience experiences={experiences} />
-      </section>
+      </section> */}
 
       <section id="skills" className="snap-center">
         <Skills skills={skills} />
@@ -64,7 +64,7 @@ const Home = ({pageInfo, experiences, projects, skills, socials}: Props) => {
         <footer className="sticky bottom-5 cursor-pointer">
           <div className="flex items-centr justify-center">
             <img
-              className="object-cover h-16 w-16 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
+              className="object-cover h-14 w-14 rounded-full filter grayscale hover:grayscale-0 cursor-pointer"
               src="https://cdn.discordapp.com/attachments/947981440530911263/1025519272555991100/asdp_logo_4000.PNG"
               alt=""
             />
@@ -79,7 +79,7 @@ export default Home;
 
 export const getStaticProps: GetStaticProps<Props> = async () => {
   const pageInfo: PageInfo = await fetchPageInfo();
-  const experiences: Experience[] = await fetchExperiences();
+  // const experiences: Experience[] = await fetchExperiences();
   const skills: Skill[] = await fetchSkills();
   const projects: Project[] = await fetchProjects();
   const socials: Social[] = await fetchSocials();
@@ -87,7 +87,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
   return {
     props: {
       pageInfo,
-      experiences,
+      // experiences,
       skills,
       projects,
       socials

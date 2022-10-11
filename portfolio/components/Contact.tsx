@@ -48,7 +48,7 @@ function Contact({}: Props) {
           className="text-2xl text-center font-thin lowercase underline
            decoration-[#82a0ff]"
         >
-          let's have a chat.
+          let`s have a chat.
         </h4>
 
         <div className="space-y-4">
@@ -95,7 +95,7 @@ function Contact({}: Props) {
           />
           <textarea
             {...register("message")}
-            placeholder="Don't be shy...👉👈 Send a message!"
+            placeholder="Don`t be shy...👉👈 Send a message!"
             className="contactInput"
           />
           <button className="bg-[#82a0ff] text-black py-5 px-10 rounded-md font-bold">
