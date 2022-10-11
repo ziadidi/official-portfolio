@@ -30,8 +30,8 @@ function Projects({ projects }: Props) {
         {projects?.map((project, i) => (
           <div
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 
-          items-center justify-center p-16 md:p-44 h-screen"
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-3 
+          items-center justify-center p-8 md:p-32 h-screen"
           >
             <a
               href={project?.linkToBuild}
@@ -51,8 +51,8 @@ function Projects({ projects }: Props) {
                 className="mt-[10px] w-[40%] md:w-[40%] lg:w-[25%]"
               />
             </a>
-            <div className="space-y-3 px-0 md:px-10 max-w-7xl">
-              <h4 className="text-2xl md:text-3xl font-semibold text-center">
+            <div className="space-y-2 px-0 md:px-10 max-w-7xl">
+              <h4 className="text-xl md:text-2xl lg:text-3xl font-semibold text-center">
                 Project{" "}
                 <span className="underline decoration-[#82a0ff]/80">
                   {i + 1} of {projects.length}
@@ -62,14 +62,14 @@ function Projects({ projects }: Props) {
                 {" "}
                 {project?.technologies.map((technology) => (
                   <img
-                    className="h-10 w-10 object-cover"
+                    className="h-8 w-8 object-cover"
                     key={technology._id}
                     src={urlFor(technology.image).url()}
                   />
                 ))}
               </div>
 
-              <p className="mb-[70px] text-lg text-center md:text-left">
+              <p className="text-base mb-[70px] md:text-lg text-center md:text-left">
                 {project?.summary}
               </p>
             </div>
